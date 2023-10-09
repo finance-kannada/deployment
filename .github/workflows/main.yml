@@ -45,3 +45,10 @@ jobs:
           echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USERNAME} --password-stdin
           docker buildx create --use
           docker buildx build --platform linux/amd64 -t 1bm21cs030/webdev:latest --push .
+
+      - name: Deploy to Fly.io
+        run: |
+          curl -L https://fly.io/install.sh | sh
+          flyctl auth login --token fo1_NbHMwTZdCKjBQnjYL0pTvWSLu89xBN160tK8WLH56bY
+          flyctl apps create your-app-name
+          flyctl deploy -i 1bm21cs030/webdev:latest
