@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="/css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-black">
+        <div class="container mx-auto flex items-center justify-between py-4 px-4">
+            <div class="flex items-center">
+                <a href="/index.html">
+                    <img src="/images/logo.jpg" alt="Logo" class="h-8 w-8 mr-2">
+                    <h1 class="text-white text-2xl font-bold">Finance Kannada</h1>
+                  </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="/in_home.html" class="text-white hover:text-purple-200 px-4 py-2">Home</a>
+                <a href="/course.html" class="text-white hover:text-purple-200 px-4 py-2">Course</a>
+                <a href="/index.html" class="text-white hover:text-purple-200 px-4 py-2">Log out</output></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="flex flex-col md:flex-row">
+        <div class="md:w-3/5">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold mb-4">Why Invest?</h2>
+                <p class="text-lg leading-7">
+                    Investing is your gateway to financial success and freedom. 
+                    It opens doors to a world of opportunities, where your money has the potential to grow exponentially. 
+                    By intelligently diversifying your portfolio across different asset classes, you can spread risk and maximize returns. 
+                    Investing allows you to participate in the growth of innovative companies, emerging industries, and global markets. 
+                    It cultivates financial discipline, fosters learning, and sharpens your decision-making skills. Whether you aim to retire comfortably, fund your children's education, or pursue your passions, investing is the vehicle that propels you towards your goals. 
+                    Start now and embark on a journey towards a prosperous and fulfilling future.
+                </p>
+            </div>
+        </div>
+        <div class="md:w-2/5 flex justify-center items-center">
+            <img src="\images\images.png" alt="Graph Animation" class="h-60">
+        </div>
+    </section>
+
+    <section class="flex flex-col md:flex-row mt-8 md:mt-4">
+        <div class="flex-1 md:order-2">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-4xl font-bold mb-4">Why Finance Kannada?</h2>
+                <p class="text-lg">
+                    Finance Kannada offers comprehensive courses on financial literacy in the Kannada language. 
+                    These courses empower individuals to gain a deep understanding of personal finance, investment strategies, and money management. 
+                    With expert guidance and practical insights, participants can develop crucial skills to make informed financial decisions and secure their financial future. 
+                    Start your journey to financial success with Finance Kannada's educational offerings today!
+                </p>
+            </div>
+        </div>
+        <div class="flex-1 md:order-1">
+            <div class="relative h-80 md:h-96 mx-auto overflow-hidden">
+                <img src="/images/7-2-finance-png-file-thumb.png" alt="Image 1" class="w-full h-full object-cover absolute top-0 left-0 transform translate-x-0 transition-opacity duration-1000 opacity-100">
+                <img src="/images/home1.jpeg" alt="Image 2" class="w-full h-full object-cover absolute top-0 left-0 transform translate-x-full transition-opacity duration-1000 opacity-0">
+                <img src="/images/7-2-finance-png-file-thumb.png" alt="Image 3" class="w-full h-full object-cover absolute top-0 left-0 transform translate-x-full transition-opacity duration-1000 opacity-0">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-500 py-8">
+        <div class="mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <h2 class="text-xl font-bold">Contact us</h2>
+            <div class="mt-4 md:mt-0">
+                <a href="mailto:example@example.com" class="mr-4">example@example.com</a>
+                <a href="tel:+1234567890" class="mr-4">123-456-7890</a>
+                <a href="https://www.instagram.com/example" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const imageSlider = document.querySelector(".h-80");
+            const images = Array.from(imageSlider.getElementsByTagName("img"));
+            let currentImageIndex = 0;
+
+            function showNextImage() {
+                const currentImage = images[currentImageIndex];
+                const nextImageIndex = (currentImageIndex + 1) % images.length;
+                const nextImage = images[nextImageIndex];
+
+                currentImage.style.opacity = "0";
+                nextImage.style.opacity = "1";
+
+                currentImage.style.transform = "translateX(-100%)";
+                nextImage.style.transform = "translateX(0)";
+
+                currentImageIndex = nextImageIndex;
+            }
+
+            setInterval(showNextImage, 2000);
+        });
+    </script>
+
+</body>
+
+</html>

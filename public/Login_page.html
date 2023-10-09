@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/output.css" rel="stylesheet">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      flex-grow: 1;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+  <title>Login Page</title>
+</head>
+<body>
+  <nav class="bg-pink-500">
+    <div class="container mx-auto flex items-center justify-between py-4 px-4">
+      <div class="flex items-center">
+        <a href="/index.html">
+          <img src="/images/logo.jpg" alt="Logo" class="h-8 w-8 mr-2">
+          <h1 class="text-white text-2xl font-bold">Finance Kannada</h1>
+        </a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="/index.html" class="text-white hover:text-purple-200 px-4 py-2">Home</a>
+        <a href="/Registeration_page.html" class="text-white hover:text-purple-200 px-4 py-2">Register</a>
+        <a href="/Login_page.html" class="text-white hover:text-purple-200 px-4 py-2">Log in</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content container mx-auto mt-8">
+    <div class="max-w-md mx-auto bg-white p-8 border rounded shadow">
+      <h2 class="text-2xl font-bold mb-4">Login</h2>
+      <div id="error-msg" class="text-red-500 mb-4"></div>
+      <form id="login-form" action="/login" method="post">
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 font-bold mb-2">email</label>
+          <input type="text" id="email" name="email" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block text-gray-700 font-bold mb-2">Password</label>
+          <input type="password" id="password" name="password" class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+        <button type="submit" class="bg-pink-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">Log in</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer bg-black text-gray-500 py-8">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+      <h2 class="text-xl font-bold">Contact us</h2>
+      <div class="mt-4 md:mt-0">
+        <a href="mailto:example@example.com" class="mr-4">example@example.com</a>
+        <a href="tel:+1234567890" class="mr-4">123-456-7890</a>
+        <a href="https://www.instagram.com/example" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const errorMessage = document.getElementById('error-msg');
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Send email and password to the server for validation
+      // Replace this with your own logic or API call
+
+      // Simulating server validation
+      if (email === '' || password === '') {
+        errorMessage.textContent = 'Incorrect email/password';
+        
+      } else {
+        
+        loginForm.submit();
+        errorMessage.textContent = '';
+      
+      }
+    });
+  </script>
+</body>
+</html>

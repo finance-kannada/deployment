@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Page</title>
+  <link href="/css/output.css" type="text/css" rel="stylesheet">
+  <style>
+    .container {
+      max-width: 500px;
+    }
+  </style>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100">
+  <nav class="bg-pink-500">
+    <div class="mx-auto flex items-center justify-between py-4 px-4">
+      <div class="flex items-center">
+        <a href="/index.html">
+          <img src="/images/logo.jpg" alt="Logo" class="h-8 w-8 mr-2">
+          <h1 class="text-white text-2xl font-bold">Finance Kannada</h1>
+        </a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="/index.html" class="text-white hover:text-purple-200 px-4 py-2">Home</a>
+        <a href="/Registeration_page.html" class="text-white hover:text-purple-200 px-4 py-2">Register</a>
+        <a href="/Login_page.html" class="text-white hover:text-purple-200 px-4 py-2">Log in</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto mt-10 flex-grow">
+    <form action="/register" method="post" id="registerForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <!-- Personal Information Section -->
+      <div id="personalInfoSection">
+        <h2 class="text-2xl mb-4">Personal Information</h2>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="nameInput">Name</label>
+          <input name="nameInput" id="nameInput" type="text" placeholder="Enter your name" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="dobInput">Date of Birth</label>
+          <input name="dobInput" id="dobInput" type="date" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="sexInput">Sex</label>
+          <select name="sexInput" id="sexInput" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <option name="sexInput" value="">Select Sex</option>
+            <option name="sexInput" value="male">Male</option>
+            <option name="sexInput" value="female">Female</option>
+            <option name="sexInput" value="other">Other</option>
+          </select>
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="emailInput">Email</label>
+          <input name="emailInput" id="emailInput" type="email" placeholder="Enter your email" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="phoneInput">Phone Number</label>
+          <input name="phoneInput" id="phoneInput" type="tel" placeholder="Enter your phone number" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="flex items-center justify-between">
+          <button id="nextPersonalBtn" type="button" class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Next</button>
+        </div>
+      </div>
+
+      <!-- Demographic Information Section -->
+      <div id="demographicInfoSection" class="hidden">
+        <h2 class="text-2xl mb-4">Demographic Information</h2>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="houseInput">House Number</label>
+          <input name="houseInput" id="houseInput" type="text" placeholder="Enter your house number" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="streetInput">Street</label>
+          <input name="streetInput" id="streetInput" type="text" placeholder="Enter your street" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="areaInput">Area</label>
+          <input name="areaInput" id="areaInput" type="text" placeholder="Enter your area" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="cityInput">City</label>
+          <input name="cityInput" id="cityInput" type="text" placeholder="Enter your city" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="stateInput">State</label>
+          <input name="stateInput" id="stateInput" type="text" placeholder="Enter your state" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="landmarkInput">Landmark</label>
+          <input name="landmarkInput" id="landmarkInput" type="text" placeholder="Enter your landmark" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="flex items-center justify-between">
+          <button id="prevDemographicBtn" type="button" class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Previous</button>
+          <button id="nextDemographicBtn" type="button" class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Next</button>
+        </div>
+      </div>
+
+      <!-- Login Information Section -->
+      <div id="loginInfoSection" class="hidden">
+        <h2 class="text-2xl mb-4">Login Information</h2>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="passwordInput">Password</label>
+          <input name="passwordInput" id="passwordInput" type="password" placeholder="Enter your password" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="confirmPasswordInput">Confirm Password</label>
+          <input id="confirmPasswordInput" type="password" placeholder="Confirm your password" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          <p class="text-red-500 text-xs italic mt-1"></p>
+        </div>
+        <div class="flex items-center justify-between">
+          <button id="prevLoginBtn" type="button" class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Previous</button>
+          <button type="submit" id="submitBtn"  value="Submit" class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <footer class="bg-black text-gray-500 py-8">
+    <div class="mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+      <h2 class="text-xl font-bold">Contact us</h2>
+      <div class="mt-4 md:mt-0">
+        <a href="financekannada44@gmail.com" class="mr-4">example@example.com</a>
+        <a href="tel:+1234567890" class="mr-4">123-456-7890</a>
+        <a href="https://www.instagram.com/example" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Personal Information Validation
+    function validatePersonalInfo() {
+      const nameInput = document.getElementById('nameInput');
+      const dobInput = document.getElementById('dobInput');
+      const sexInput = document.getElementById('sexInput');
+      const emailInput = document.getElementById('emailInput');
+      const phoneInput = document.getElementById('phoneInput');
+
+      let isValid = true;
+
+      if (nameInput.value.trim() === '') {
+        showError(nameInput, 'Name is required');
+        isValid = false;
+      }
+
+      if (dobInput.value === '') {
+        showError(dobInput, 'Date of Birth is required');
+        isValid = false;
+      }
+
+      if (sexInput.value === '') {
+        showError(sexInput, 'Sex is required');
+        isValid = false;
+      }
+
+      if (emailInput.value.trim() === '') {
+        showError(emailInput, 'Email is required');
+        isValid = false;
+      } else if (!isValidEmail(emailInput.value.trim())) {
+        showError(emailInput, 'Invalid email format');
+        isValid = false;
+      }
+
+      if (phoneInput.value.trim() === '') {
+        showError(phoneInput, 'Phone Number is required');
+        isValid = false;
+      } else if (!isValidPhone(phoneInput.value.trim())) {
+        showError(phoneInput, 'Invalid phone number format');
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    // Demographic Information Validation
+    function validateDemographicInfo() {
+      const houseInput = document.getElementById('houseInput');
+      const streetInput = document.getElementById('streetInput');
+      const areaInput = document.getElementById('areaInput');
+      const cityInput = document.getElementById('cityInput');
+      const stateInput = document.getElementById('stateInput');
+      const landmarkInput = document.getElementById('landmarkInput');
+
+      let isValid = true;
+
+      if (houseInput.value.trim() === '') {
+        showError(houseInput, 'House Number is required');
+        isValid = false;
+      }
+
+      if (streetInput.value.trim() === '') {
+        showError(streetInput, 'Street is required');
+        isValid = false;
+      }
+
+      if (areaInput.value.trim() === '') {
+        showError(areaInput, 'Area is required');
+        isValid = false;
+      }
+
+      if (cityInput.value.trim() === '') {
+        showError(cityInput, 'City is required');
+        isValid = false;
+      }
+
+      if (stateInput.value.trim() === '') {
+        showError(stateInput, 'State is required');
+        isValid = false;
+      }
+
+      if (landmarkInput.value.trim() === '') {
+        showError(landmarkInput, 'Landmark is required');
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    // Login Information Validation
+    function validateLoginInfo() {
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+      const confirmPasswordInput = document.getElementById('confirmPasswordInput');
+
+      let isValid = true;
+
+      if (emailInput.value.trim() === '') {
+        showError(emailInput, 'email is required');
+        isValid = false;
+      }
+
+      if (passwordInput.value === '') {
+        showError(passwordInput, 'Password is required');
+        isValid = false;
+      } else if (!isValidPassword(passwordInput.value)) {
+        showError(passwordInput, 'Password must be at least 8 characters and contain uppercase and lowercase letters, numbers, and symbols');
+        isValid = false;
+      }
+
+      if (confirmPasswordInput.value === '') {
+        showError(confirmPasswordInput, 'Confirm Password is required');
+        isValid = false;
+      } else if (passwordInput.value !== confirmPasswordInput.value) {
+        showError(confirmPasswordInput, 'Passwords do not match');
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    // Helper function to display error message
+    function showError(input, message) {
+      const errorText = input.nextElementSibling;
+      errorText.innerText = message;
+    }
+
+    // Helper function to validate email format
+    function isValidEmail(email) {
+      const emailRegex = /^\S+@\S+\.\S+$/;
+      return emailRegex.test(email);
+    }
+
+    // Helper function to validate phone number format
+    function isValidPhone(phone) {
+      const phoneRegex = /^\d{10}$/;
+      return phoneRegex.test(phone);
+    }
+
+    // Helper function to validate password format
+    function isValidPassword(password) {
+      const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+      return passwordRegex.test(password);
+    }
+
+    // Button functionality
+    const nextPersonalBtn = document.getElementById('nextPersonalBtn');
+    const prevDemographicBtn = document.getElementById('prevDemographicBtn');
+    const nextDemographicBtn = document.getElementById('nextDemographicBtn');
+    const prevLoginBtn = document.getElementById('prevLoginBtn');
+    const submitBtn = document.getElementById('submitBtn');
+
+    nextPersonalBtn.addEventListener('click', function() {
+      if (validatePersonalInfo()) {
+        document.getElementById('personalInfoSection').classList.add('hidden');
+        document.getElementById('demographicInfoSection').classList.remove('hidden');
+      }
+    });
+
+    prevDemographicBtn.addEventListener('click', function() {
+      document.getElementById('personalInfoSection').classList.remove('hidden');
+      document.getElementById('demographicInfoSection').classList.add('hidden');
+    });
+
+    nextDemographicBtn.addEventListener('click', function() {
+      if (validateDemographicInfo()) {
+        document.getElementById('demographicInfoSection').classList.add('hidden');
+        document.getElementById('loginInfoSection').classList.remove('hidden');
+      }
+    });
+
+    prevLoginBtn.addEventListener('click', function() {
+      document.getElementById('demographicInfoSection').classList.remove('hidden');
+      document.getElementById('loginInfoSection').classList.add('hidden');
+    });
+
+    
+    submitBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (validateLoginInfo()) {
+        document.getElementById('registerForm').submit();
+      }
+    });
+  
+</script>
+
+</body>
+
+</html>
